@@ -7,7 +7,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
-import java.util.Optional;
 
 /**
  * Controller for handling public event listings, searches, and administrative CRUD operations.
@@ -32,7 +31,7 @@ public class EventoController {
      * Endpoint: GET /api/eventos
      * Retrieves a filtered and sorted list of future events for the main page.
      * @param keyword Optional search keyword (uses EventoRepository.findByNombreContainingIgnoreCase)
-     * @param sortBy Optional field to sort by (e.g., "fecha", "precioBase")
+     * @param sortBy Optional field to sort by (e.g., "fecha", "nombre", "ubicacion", "stock")
      * @param sortDir Optional sort direction ("asc" or "desc")
      * @return List of Evento entities (or DTOs for production)
      */
